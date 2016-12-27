@@ -1,0 +1,32 @@
+<header class="site-header">
+	<div class="menu-wrap">
+		<h3><%= link_to 'JP Costallos', '/' %></h3>
+		<h4><em>Web Developer</em></h4>
+		<nav class="main-menu gamma">
+			<ul>
+			  <li><%= link_to 'Home', '/' %></li>
+		      <li><%= link_to 'Resume', '/resume' %></li>
+		      <li>
+		      	Projects
+		      	<ul class='sub-menu delta'>
+			      <% blog.articles[0...4].each do |article| %>
+			      <li><%= link_to article.title, article %></li>
+			      <% end %>
+			    </ul>
+			  </li>
+			</ul>		      
+		</nav>
+		<button class="close-button" id="close-button"></button>
+		<nav class="social-menu gamma">
+		  <ul>
+		      <li><%= link_to '<i class="icon-twitter"></i>', 'http://twitter.com/jpcostallos' %></li>
+		      <li><%= link_to '<i class="icon-github"></i>', 'http://github.com/jpcostallos' %></li>
+		      <li><%= link_to '<i class="icon-envelope"></i>', 'mailto:web@jpcostallos.com' %></li>
+		  </ul>
+		</nav> 
+	</div>
+<button class="menu-button" id="open-button"></button>
+ 
+</header>
+
+

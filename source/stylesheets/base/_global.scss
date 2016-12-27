@@ -1,0 +1,55 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $light;
+  -webkit-overflow-scrolling: touch; // momentum scrolling
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+.image-frame, .image-caption{
+  text-align: center;
+  padding: $base-spacing 0;
+}
+
+.headshot img{
+  border-radius: 50%;
+
+}
+
+.image-caption{
+  margin: $small-spacing;
+}
+
+.spacer{
+  padding: $base-spacing;
+  margin: $base-spacing;
+}
+
+// ********************
+// Helper Classes
+// ********************
+.pad-top {
+  padding-top: 5em;
+}
+
+.ninja {
+  display: none;
+}
+
+.v-align-middle { vertical-align: middle; }
+
+
+.resume-intro{
+  padding-top: $base-spacing;
+}

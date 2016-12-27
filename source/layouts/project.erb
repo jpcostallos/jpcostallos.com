@@ -1,0 +1,31 @@
+---
+layout: projects
+---
+<% wrap_layout :layout do %>
+	<header class="project-header">
+	  <div class="container">
+	    <h1><%=  current_page.data.title %></h1>
+	    <hr>
+	    <h2>Role: <%=  current_page.data.duties %></h2>
+	    <time>Date: <%=  current_page.data.date %></time>
+	  </div>
+	</header>
+	<article class="project-container">
+	  <div class="container">
+		<%= yield %>
+	  </div>
+	</article>
+	<section class="more-projects">
+	  <div class="container">
+	    <h2 class="section-title">View More Projects</h2>
+	    <hr>
+	      <% blog.articles[0...4].each_with_index do |article, index| %>
+	      <div class="smaller-column">
+	        <h3><%= article.title %></h3>
+	        <p><%= article.data.duties %></p>
+            <%= link_to 'View Project >', article %>
+	      </div>
+	      <% end %>
+	  </div>
+	</section>
+<% end %>

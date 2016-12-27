@@ -1,0 +1,117 @@
+---
+layout: layout
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="inner-container">
+    <h1 class="js-home-el home-el kilo">JP Costallos</h1>
+    <h2 class="headline letters type">
+      <span>I'm JP, I'm a </span>
+      <span class="words-wrapper">
+        <b class="is-visible">web developer.</b>
+        <b>lifetime learner.</b>
+        <b>social being.</b>
+        <b>UCF Alumni.</b>
+        <b>traveler.</b>
+      </span>
+    </h2>
+  </div>
+</section>
+
+
+<section class="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <hr>
+    <div class="small-column">
+      <div class="image-frame">
+        <img src="images/headshot.jpg" alt="Headshot">
+      </div> 
+    </div>
+    <div class="large-column">
+      <h3>Interests, Passions, & Goals</h3>      
+      <p>I'm John (JP) Costallos. I love to build, talk, learn, and teach anything that has to do with the web. I'm a dedicated professional looking to help build the web and the community surrounding it. </p>
+      <p>I enjoy being social in any environment and have a passion for my work, traveling, and my friends & family. I plan to use my time within the web field to learn and have new experiences, while building incredible projects. </p>
+      <p>I wish to someday become a community leader and help build and instill a stronger passion for the web within anyone I connect with.</p>      
+    </div>
+  </div>
+  <div class="container">    
+    <div class="large-column">
+      <h3>A Little Bit More About Me</h3>
+      <ul>
+        <li><em>Frequent Sites:</em><br> <%= link_to 'CSS-Tricks', 'http://css-tricks.com', target: '_blank' %>, <%= link_to 'Codepen', 'http://codepen.io', target: '_blank' %>, Stack Overflow, Codrops, <%= link_to 'CodyHouse', 'http://codyhouse.co', target: '_blank'%></li>
+        <li><em>Podcasts:</em><br> <%= link_to 'Shoptalk Show', 'http://shoptalkshow.com', target: '_blank' %>, The Web Ahead, This American Life</li>
+        <li><em>Conferences:</em><br> <%= link_to 'Front End Design Conference', 'http://frontenddesignconference.com/', target: '_blank' %>, In Control Mobile & Web Design Conference</li>
+        <li><em>Music:</em><br> <%= link_to 'Tenacious D', 'https://www.youtube.com/watch?v=FL4HSiGvk68', target: '_blank'%>, Arctic Monkeys, Kid Cudi, The Black Keys</li>
+      </ul><br>
+      <p>Be sure to give me a follow on <%= link_to 'Twitter', 'http://twitter.com/jpcostallos' %> or look at what I've been working on at <%= link_to 'Github', 'http://github.com/jpcostallos' %>.
+</p>
+    </div>
+    <div class="small-column">
+      <div class="image-frame">
+        <img src="images/jp.jpg" alt="UCF Talk">
+      </div> 
+      <p class="image-caption"><em> Giving a talk on front-end web development at UCF.</em></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="skills">
+  <div class="container">
+
+    <h2 class="section-title">Skills</h2>
+    <hr>
+    <div class="skill smaller-column">
+      <h3 class="icon-screen">Web Development</h3>
+      <p>I develop beautiful, user-driven websites, and web applications that work.</p>
+    </div>
+    <div class="skill smaller-column">
+      <h3 class="icon-mobile">UI/UX Design</h3>
+      <p>I like to make lives simpler and easier, while creating and developing intuitive interfaces.</p>
+    </div>
+    <div class="skill smaller-column">
+      <h3 class="icon-wordpress">WordPress Design</h3>
+      <p>I make custom WordPress themes for users who need to update their content.</p>
+    </div>
+    <div class="skill smaller-column">
+      <h3 class="icon-bubbles">Social Being</h3>
+      <p>I'm huge on conversation. I love to talk about my work and meet others in the industry.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="projects">
+  <div class="container">
+
+    <h2 class="section-title">Recent Projects</h2>
+    <hr>
+      <p>These are a few projects that I've been fortunate enough to work on. Most of these projects are currently still being utilized. I've left a piece of me with every work and took an even bigger piece with me when I finished it. I find that writing about my work both during and after helps answer a lot of questions that I find myself asking. It provides clarity for both myself and anyone my work is connected to.</p>
+      <% blog.articles[0...4].each_with_index do |article, index| %>
+      <% if index == 0 %>
+      <div class="project full-column">
+      <% elsif index == 1 %>
+      <div class="project full-column">
+      <% elsif index == 2 %>
+      <div class="project full-column">
+      <% else %>
+      <div class="project full-column">  
+      <% end %>
+        <figure>
+          <img src="<%= article.data.featuredImage %>" alt="<%= article.data.title %>">
+          <figcaption>
+            <h3><%= article.title %></h3>
+            <span><%= article.data.duties %></span>
+            <%= link_to 'View Project >', article %>
+          </figcaption>
+        </figure>
+      </div>
+      <% end %>
+
+  </div>
+</section>
+
+

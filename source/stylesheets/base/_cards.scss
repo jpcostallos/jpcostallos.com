@@ -1,0 +1,78 @@
+// Project Cards
+
+.project {
+    margin-top: $base-spacing;
+    figure {
+        height: 300px;
+        img {            
+            transition: transform 0.4s;
+        }
+    }
+    figcaption {
+        height: 100px;
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        opacity: 0;        
+        transform: translateY(100%);        
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+        a {
+            position: absolute;
+            bottom: 13px;
+            right: 13px;
+        }
+    }
+}
+.project figure:hover {
+    figcaption {
+        opacity: 1;    
+        transform: translateY(0px);    
+        transition: transform 0.4s, opacity 0.1s;
+    }
+}
+
+
+figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: $dark-blue;
+    img {
+        max-width: 100%;
+        display: block;
+        opacity: 0.7;
+        position: relative;
+    }
+}
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: $dark-blue;
+    color: $gray;
+    h3 {
+        margin: 0;
+        padding: 0;
+        color: $light;
+    }
+    a {
+        text-align: center;        
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    .project figure figcaption {
+        opacity: 1;    
+        transform: translateY(0px);    
+        transition: transform 0.4s, opacity 0.1s;
+    }
+}
+
+// Skills Cards
+.skills .skill{
+    padding: $small-spacing;
+}
+

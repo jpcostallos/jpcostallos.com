@@ -1,0 +1,99 @@
+.hero {
+  text-align: center;
+  height: 80%;
+  width: 100%;
+}
+
+.hero-bg {
+  height: 100%;
+  width: 100%;
+  background-image: url(/images/pattern.gif);
+  background-attachment: fixed;
+  filter: opacity(0.3);
+
+}
+
+.inner-container {
+  vertical-align: middle;
+  padding: 0 10px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about {
+  padding-top: 2em;
+}
+
+.words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+  padding: 0 3px;
+}
+.words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .words-wrapper b {
+  opacity: 0;
+}
+.no-js .words-wrapper b.is-visible {
+  opacity: 1;
+}
+/* -------------------------------- 
+
+xtype 
+
+-------------------------------- */
+.headline.type .words-wrapper {
+  vertical-align: top;
+  overflow: hidden;
+}
+.headline.type .words-wrapper::after {
+  /* vertical bar */
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+
+  transform: translateY(-50%);
+  height: 90%;
+  width: 1px;
+  background-color: $gray;
+}
+.headline.type .words-wrapper.waiting::after {
+  animation: cd-pulse 1s infinite;
+}
+.headline.type .words-wrapper.selected {
+  background-color: $gray;
+}
+.headline.type .words-wrapper.selected::after {
+  visibility: hidden;
+}
+.headline.type .words-wrapper.selected b {
+  color: $dark-blue;
+}
+.headline.type b {
+  visibility: hidden;
+}
+.headline.type b.is-visible {
+  visibility: visible;
+}
+.headline.type i {
+  position: absolute;
+  visibility: hidden;
+}
+.headline.type i.in {
+  position: relative;
+  visibility: visible;
+}
+

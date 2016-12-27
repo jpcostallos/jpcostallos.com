@@ -1,0 +1,65 @@
+#main {
+    height: 100%;
+}
+
+.container{
+  @include outer-container;
+  padding: $base-spacing
+
+}
+
+.large-column {
+  @include span-columns(8 of 12);
+  margin-right: 0;
+
+}
+
+.small-column {
+  @include span-columns(4 of 12);
+}
+
+.smaller-column {
+  @include span-columns(3 of 12);
+}
+
+.full-column {
+  @include span-columns(12 of 12);
+}
+
+.half-column {
+  @include span-columns(6 of 12);
+
+}
+
+
+@media screen and (max-width: 750px){
+	.large-column {
+	  @include span-columns(12 of 12);
+
+	}
+
+	.small-column {
+	  @include span-columns(12 of 12);
+	}
+
+	.smaller-column {
+	  @include span-columns(6 of 12);
+	  margin: 0;
+	}
+
+	.half-column {
+	  @include span-columns(12 of 12);
+	}
+
+
+}
+
+
+
+@media screen and (max-width: 450px){
+
+	.smaller-column {
+	  @include span-columns(12 of 12);
+	  margin: 0;
+	}
+}

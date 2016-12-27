@@ -1,0 +1,61 @@
+// Typography
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic|Source+Serif+Pro:400,600);
+$sans-serif: 'Open Sans', $helvetica;
+$serif: 'Source Serif Pro', Georgia, Serif ;
+$base-font-family: $sans-serif;
+$heading-font-family: $serif;
+
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+
+//Custom Colors
+$midnight-blue: #34495e;
+$light: #ecf0f1;
+
+// Pattern Colors
+$dark-blue: #27353e;
+$light-blue: #27a7c7;
+$green: #accc2d;
+$brown: #624d34; 
+$tan: #f1e6c6;
+$gray: #b2beb3;
+
+
+
+// Font Colors
+$base-font-color: $dark-blue;
+$action-color: $light-blue;
+
+// Border
+$base-border-color: $gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

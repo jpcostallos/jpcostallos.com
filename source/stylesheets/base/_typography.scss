@@ -1,0 +1,154 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+/* These handle massive type, for less frequently occuring bits of text (e.g. in mastheads and banners). */
+.giga {
+  font-size:80px;
+  font-size:5rem;
+  line-height:1.2;
+  font-weight: 700;
+}
+
+.mega {
+  font-size:64px;
+  font-size:4rem;
+  line-height:1.125;
+  font-weight: 700;
+}
+
+.kilo {
+  font-size:48px;
+  font-size:3rem;
+  line-height:1;
+  font-weight: 700;
+}
+
+/* Define headings and their associated classes here. */
+h1,
+.alpha {
+  font-size:32px;
+  font-size:2rem;
+  line-height:1.5;
+  font-weight: 700;
+  margin: $base-spacing 0;
+}
+
+h2,
+.beta {
+  font-size:1.5em;
+  line-height:1;
+  font-weight: 700;
+  margin: $base-spacing 0;
+
+}
+
+h3,
+.gamma {
+  font-size:20px;
+  font-size:1.25rem;
+  line-height:1.2;
+  font-weight: 700;
+  margin: $base-spacing 0;
+}
+
+h4,
+.delta {
+  font-size:18px;
+  font-size:1.125rem;
+  line-height:1.333;
+  margin: $base-spacing 0;
+  
+}
+
+h5,
+.epsilon {
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.5;
+}
+
+h6,.zeta {
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.5;
+}
+
+/* Smaller-than-body-copy sizes here. */
+small,
+.milli {
+  font-size:12px;
+  font-size:0.75rem;
+  line-height:2;
+}
+
+ol {
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+
+// Custom bullet symbol and color
+ul.custom-bullets li {
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
+  position: relative;
+
+  &:before {
+    // color: $red;
+    content: "\2022";
+    display: block;
+    font-size: 22px;
+    position: absolute;
+    left: 0.2em;
+    top: -4px;
+    width: 1em;
+    max-height: 1em;
+    vertical-align: top;
+  }
+}
+
+strong { font-weight: 700; }
+
+em { font-style: italic; }
+
+.section-title { padding: 0 25px; }
